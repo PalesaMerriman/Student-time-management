@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.study1{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 20px;
+}
+ 
+body{
+    background-color: bisque;
+    width:100%;
+    height: fit-content;
+    block-size: fit-content;
+      
+}
+
+.intro {
+  column-count: 2;
+  column-gap: 0px;
+  
+}
+
+.body{
+  column-count: 2;
+  column-gap: 0px;
+}
+
+.con{
+  column-count: 2;
+  column-gap: 0px;
+
+}
+
+.co2{
+  column-count: 2;
+  column-gap: 0px;
+}
+
+button {
+  width: 55px;
+  padding: 5px;
+  margin:  2px;
+  background-color: #ff7e00;
+  outline: none;
+  border: 1px solid #ff7e00;
+  box-shadow: 2px 2px 2px #3f3f3f;
+}
+
+button:hover {
+  box-shadow: 2px 2px 3px ;
+}
+
+button:active {
+  box-shadow: 1px 1px 3px ;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 20px;
+
+}
+
+
+</style>
+</head>
+<body>
+
+
+    <div id="myDIV" class="header">
+    <h1 style="margin:5px">School Task Schedule</h1>
+
+    </div>
+   
+    <div class="row">
+      <div class="column" column-width="80px" >
+        <h2>Communiation Networks 2</h2>
+          <ul list-style="none" class="intro" style="line-height:80%">
+                  <li>Module Credit : 20</li> <br>
+                  <li>Classes per Week:5 </li>  <br>
+                  <li>Study Hours: 60hrs</li> <br> <br> 
+  
+                
+              <div class="study1" id="container" >
+              <ul id="edit">
+              
+            <li>Monday: 6hrs</li> <br>
+            <li>Tuesday: 5hrs</li> <br>
+            <li>Wednesday: 4hrs</li> <br>
+            <li>Thursday: 7hrs</li> <br>
+            <li>Friday: 5hrs</li> <br>
+
+            <button type="submit" id="edit-button">Edit</button>
+            <button type="submit" id="end-editing">Done</button>
+            
+          </ul>
+        </ul>
+        
+        </div>
+
+ </div>
+
+
+        <div class="row">  
+          <div class="column" >
+            <h2>Multimedia 2 </h2>
+              <ul list-style="none" class="body" style="line-height:80%">
+                <li>Module Credit : 20</li> <br>
+                <li>Classes per Week:5 </li>  <br>
+                <li>Study Hours: 60hrs</li> <br> <br> <br> <br>
+        
+        
+        
+     
+                  <div class="study2" id="container">
+                  <ul id="edit">
+                    
+                  <li>Monday: 6hrs</li> <br>
+                  <li>Tuesday: 5hrs</li> <br>
+                  <li>Wednesday: 4hrs</li> <br>
+                  <li>Thursday: 7hrs</li> <br>
+                  <li>Friday: 5hrs</li> <br>
+
+                  <button type="submit" id="edit-button">Edit</button>
+                  <button type="submit" id="end-editing">Done</button>
+                  
+                </ul>
+              </ul>
+
+  
+
+</div>
+
+
+
+                  </div>
+                  </div>
+                  <div class="column" >
+                    <h2>Big Data Foundations</h2>
+                    <ul list-style="none" class="con" style="line-height:80%" >
+                      <li>Module Credit : 10</li> <br>
+                      <li>Classes per Week:3 </li> <br>
+                      <li>Study Hours: 45hrs</li> <br> <br> <br> <br>
+                      
+
+                      <div class="study3" id="container">
+                      <ul id="edit" style="line-height:80%">
+                          
+                        <li>Monday: 3hrs</li> <br>
+                        <li>Tuesday: 3hrs</li> <br>
+                        <li>Wednesday: 3hrs</li> <br>
+                        <li>Thursday: 3hrs</li> <br>
+                        <li>Friday: 3hrs</li> <br>
+                      </ul>
+                      <button type="submit" id="edit-button">Edit</button>
+                      <button type="submit" id="end-editing">Done</button>
+                    </ul>
+                  </div>
+                  </div>
+                  </div>
+
+                    </div>
+                    <div class="column" >
+                      <h2>Project Management</h2>
+                      <ul list-style="none" class="co2" style="line-height:80%">
+                        <li>Module Credit : 10</li> <br>
+                        <li>Classes per Week:3 </li>  <br>
+                        <li>Study Hours per week: 30hrs</li> <br> <br> <br>
+                      
+
+                        <div class="study4" id="container">
+                        <ul id="edit"> 
+                        
+                        <li>Monday: 6hrs</li> <br>
+                        <li>Tuesday: 6hrs</li> <br>
+                        <li>Wednesday: 4hrs</li> <br>
+                        <li>Thursday: 7hrs</li> <br>
+                        <li>Friday: 6hrs</li> <br> 
+
+                    <button type="submit" id="edit-button">Edit</button>
+                    <button type="submit" id="end-editing">Done</button>
+
+                    </ul>
+                    </ul>
+
+
+
+                    </div>
+
+
+
+                    </div>
+
+<script>
+
+const list = document.getElementById("edit");
+        const edit_button = document.getElementById("edit-button");
+            const end_button = document.getElementById("end-editing");
+
+                edit_button.addEventListener("click", function() {
+                    list.contentEditable = true;
+                        list.style.backgroundColor = "#dddbdb";
+} );
+
+                            end_button.addEventListener("click", function() {
+                                list.contentEditable = false;
+                                list.style.backgroundColor = "bisque";
+} )
+  
+  </script>
+</body>
+</body>
+</html>

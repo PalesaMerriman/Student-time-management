@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content="width = device-width, initial-scale = 1.0">
+
+    <title>Multimedia Dashboard</title>
+    
+
+    <link rel = "stylesheet" href="css\styleDash.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    
+</head>
+<body>
+    <section id = "menu">
+    <div class ="logo">
+    <!--logo image insert here-->
+    <h2>To do</h2>
+    </div>
+
+    <div class = "items">
+        <li><img src="images\add-user.png"><a href="login.html" target="_blank">Login</a></li>
+        <li><img src="images\add-user.png"><a href="signup.html" target="_blank">Sign in</a></li>
+        <li><img src="images\calendar.png"><a href="to-do.html" target="_blank">Calendar</a></li>
+        <li><img src="images\pen.png"></i><a href="addModule.html" target="_blank">Edit</a></li>
+        <li><img src="images\cubes.png"></i><a href="addModule.html" target="_blank">Modules +</a></li>
+            
+        <li><img src="images\shutdown.png"></i><a href="#">Logout</a></li>
+
+    </div>
+</section>
+
+<section id="interface">
+    <div class="navigation">
+        <div class="n1">
+            <div id="menu-btn">
+                <img src="images\menu (1).png">
+            </div>
+            <div class="search">
+               <img src="images\loupe.png">
+               <input type="text" value = "" placeholder="Search" onchange="openPage()">
+
+               <script>
+                function openPage(){
+                    var x = document.getElementById("search").value;
+
+                    if(x == "Multimedia"){
+                        window.open("/index.html");
+                    }
+                }
+               </script>
+            </div>
+        </div>
+        <div class="profile">
+            <img src="images\bell.png">
+            
+        </div>
+    </div>
+    <div class="values">
+        <div class="val-box">
+            <img src = "images\design2.png">
+        </div>
+
+        </div>
+    
+</section>
+<script>
+    $('#menu-btn').click(function(){
+        $('#menu').toggleClass("active");
+    })
+</script>
+
+</body>
+</head>
+</html>

@@ -1,0 +1,135 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>moduleinfo</title>
+</head>
+<body>
+	
+	<div class="svg"></div>
+	<div class="signup-dtl">
+		<div class="top-bar">
+			<h2 class="a_m">Add Module Info!</h2>
+			<p class="n_h">
+				
+			</p>
+		</div>
+		<form action="">
+			<input class="modN" type="text" placeholder="How many modules do you have this semester?" required>
+            <input class="modCo" type="text" placeholder="How many classes per week" required>
+			<input class="modCr" type="text" placeholder="How many weeks for the semester?" required>
+
+           
+            <p>What is you preferd time to study?</p>
+            <label class="custom-radio-btn">
+                
+            <input type="radio" id="day" name="Day" value="Day" checked>
+            <label>Day</label>
+            <span class="checkmark"></span>
+            <input type="radio" id="Nigth" name="Nigth " value="Nigth">
+            <label>Nigth</label>
+        </label>
+
+            <div class = buttons>
+            <button onclick="addLI()" class="btn">Add</button>
+            <button onclick="editLI()" class="btn">Edit</button>
+            <button onclick="deleteLI()" class="btn">Delete</button>
+            </div>
+        
+        
+      
+		</form>
+	</div>
+			
+    <script>
+            
+        var inputText = document.getElementById("txt"),
+             items = document.querySelectorAll("#list li"),
+             tab = [], index;
+     
+         // get the selected li index using array
+         // populate array with li values
+         
+         for(var i = 0; i < items.length; i++){
+             tab.push(items[i].innerHTML);
+         }
+         
+         // get li index onclick
+         for(var i = 0; i < items.length; i++){
+             
+             items[i].onclick = function(){
+                 index = tab.indexOf(this.innerHTML);
+                 console.log(this.innerHTML + " INDEX = " + index);
+                 // set the selected li value into input text
+                 inputText.value = this.innerHTML;
+             };
+             
+         }
+        
+        function refreshArray()
+        {
+            // clear array
+            tab.length = 0;
+            items = document.querySelectorAll("#list li");
+            // fill array
+            for(var i = 0; i < items.length; i++){
+             tab.push(items[i].innerHTML);
+           }
+        }
+        function addLI(){
+            
+            var listNode = document.getElementById("list"),
+                textNode = document.createTextNode(inputText.value),
+                liNode = document.createElement("LI");
+                
+                liNode.appendChild(textNode);
+                listNode.appendChild(liNode);
+                
+                refreshArray();
+                
+                // add event to the new LI
+                
+                liNode.onclick = function(){
+                 index = tab.indexOf(liNode.innerHTML);
+                 console.log(liNode.innerHTML + " INDEX = " + index);
+                 // set the selected li value into input text
+                 inputText.value = liNode.innerHTML;
+             };
+                
+         }
+         
+         function editLI(){
+             // edit the selected li using input text
+             items[index].innerHTML = inputText.value;
+             refreshArray();
+          }
+          
+          function deleteLI(){
+              
+                  refreshArray();
+                  if(items.length > 0){
+                      items[index].parentNode.removeChild(items[index]);
+                      inputText.value = "";
+                  }
+          }
+        
+    </script>
+
+
+
+
+            <div class="container2">
+                <div class="logo-box2">
+        
+                    <div class="icon-img"></div>
+                    <img src="images/2.png" alt="study" >
+        
+                </div>
+            </div>
+</body>
+</html>	
+

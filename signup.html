@@ -1,0 +1,71 @@
+<?php
+$host = "localhost";
+$username = "root";
+$password = "";
+$dbName = "testing";
+
+$conn = mysqli_connect($host,$username,$password,$dbName);
+
+if($conn){
+  echo "Successful";
+}
+ ?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css\style.css">
+	<title>signup</title>
+</head>
+<body>
+
+
+	
+	<div class="svg"></div>
+	<div class="signup-dtl">
+		<div class="top-bar">
+			<h2 class="a_m">Lets GET YOU STARTED!</h2>
+			<p class="n_h">
+				
+			</p>
+		</div>
+		<form action="">
+			<input class="uid" type="text" id="id" name="id" placeholder="Enter your user id" required>
+			<input class="username" type="text" id="userame" name="username" placeholder="Enter username" required>
+            <input class="email" type="text" id="email" name="email" placeholder="Enter your email" required>
+			<input class="pword" type="password" id="pword" name="pword" placeholder="Enter your Password" required>
+			<button class="btn">SIGN IN</button	>
+		</form>
+	</div>
+			<div class="signin">
+				<p class="dont">Don't have an account yet?</p>
+				<a href="#"><p class="cre_acc">Already have an account?</a></p>
+			</div>
+
+            <div class="container2">
+                <div class="logo-box2">
+        
+                    <div class="icon-img"></div>
+                    <img src="images/2.png" alt="study" >
+        
+                </div>
+            </div>
+</body>
+</html>	
+
+<?php
+  if(isset($_POST['submit'])){
+
+    $username = $_POST['username'];
+    $useremail = $_POST['email'];
+    $pass = $_POST['password'];
+
+    $query = "INSERT INTO test(`username`, `email`, `password`) 
+    VALUES('$username', '$useremail', '$password')";
+    $run = mysqli_query($conn,$query);
+
+  }
+ ?>

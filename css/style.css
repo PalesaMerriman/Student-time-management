@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
+	text-decoration: none;
+}
+body{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background: #ffffff;
+}
+.container1{
+	height: 800px;
+	width: 1920px;
+	background: #ffff;
+	overflow: hidden;
+	border-radius: 0px;
+}
+
+.logo-box1{
+	height: 150%;
+	width: 50%;
+	background: #a6a6a6;
+	display: center;
+}
+.container2{
+		height: 800px;
+		width: 1920px;
+		background: #ffff;
+		overflow: hidden;
+		border-radius: 0px;
+}
+.logo-box2{
+		height: 150%;
+		width: 50%;
+		background: #d49696;
+		display: center;
+}
+		.container3{
+			height: 800px;
+			width: 1920px;
+			background: #ffff;
+			overflow: hidden;
+			border-radius: 0px;
+	}
+	.logo-box3{
+			height: 150%;
+			width: 50%;
+			background: #d49696;
+			display: center;
+	
+}
+.icon-img{
+	height: 10%;
+	width: 50%;
+	display: none;
+	margin-right: 650px;
+  
+
+}
+.login-dtl{
+	height: 450px;
+	width: 450px;
+	position: absolute;
+	background: rgb(255, 254, 254);
+	margin-left: 650px;
+	margin-top: -100px;
+	overflow: hidden;
+	
+}
+
+.signup-dtl{
+	height: 480px;
+	width: 470px;
+	position: absolute;
+	background: rgb(255, 254, 254);
+	margin-left: 660px;
+	margin-top: -100px;
+	overflow: hidden;
+	
+}
+
+
+.top-bar{
+	height: 100px;
+	width: 100%;
+	box-shadow: 0px 0px 6px  gray;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-weight: 1000;
+	color: #333;
+	text-transform: uppercase;
+	font-size: 2rem;
+}
+.n_h a{
+	font-size: 14px;
+	color: gray;
+}
+input{
+	height: 45px;
+	width: 80%;
+	margin-left: 20px;
+	border: 1px solid gray;
+	border-radius: 6px;
+	padding: 20px;
+	font-size: 20px;
+	caret-color: #ffba32;
+	/*caret-shape: block ;*/
+}
+.uid{
+	margin-top: 20px;
+}
+.pword{
+	margin-top: 20px;
+}
+
+.email{
+	margin-top: 20px;
+}
+
+
+.btn{
+	height: 40px;
+	width: 80%;
+	background:  #c72858;
+	margin-left: 20px;
+	margin-top: 25px;
+	border-radius: 10px;
+	text-align: center;
+	padding: 10px;
+	color: rgb(3, 3, 3);
+	font-size: 20px;
+	cursor: pointer;
+	transition: 0.3s all;
+}
+.btn:hover{
+	background: #689898;
+}
+
+
+.signin{
+	position: absolute;
+	margin-top: 450px;
+	margin-left: 650px;
+	text-align: center;
+}
+.dont{
+	font-size: 25px;
+	color: white;
+
+}
+.cre_acc a{
+	font-size: 20px;
+	margin-top: 10px;
+	color: #1a535c;
+}
